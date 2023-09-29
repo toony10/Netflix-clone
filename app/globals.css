@@ -5,7 +5,7 @@
 /* html, body, heading */
 @layer base {
   body {
-    @apply bg-[#cabfbf];
+    @apply bg-[#141414];
   }
   header {
     @apply fixed top-0 z-50 items-center flex w-full justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
