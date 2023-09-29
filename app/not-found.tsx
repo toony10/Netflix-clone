@@ -1,5 +1,4 @@
 "use client";
-import { Head } from "next/document";
 import Link from "next/link";
 export default function NotFound() {
   return (
