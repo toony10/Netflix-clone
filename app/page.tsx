@@ -26,7 +26,7 @@ export default async function Home() {
     <div className="relative h-[150vh]">
       <Header />
       <main>
-        <Banner movies={await getData(requests.fetchHorrorMovies)} />
+        <Banner movies={await getData(requests.fetchNetflixOriginals)} />
         <section>
           {/* Row */}
           {/* Row */}

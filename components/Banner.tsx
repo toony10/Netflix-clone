@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { Movie } from "../typing";
 import { baseUrl } from "../constants/Movie";
 import Image from "next/image";
@@ -8,7 +9,13 @@ interface Props {
   movies: Movie[];
 }
 function Banner({ movies }: Props) {
-  const displayMovie: Movie = movies[Math.floor(Math.random() * movies.length)];
+  const [displayMovie, setDisplayMovie] = useState<Movie | null>(null);
+  useEffect(() => {
+    if (movies) {
+      setDisplayMovie(movies[Math.floor(Math.random() * movies.length)]);
+    }
+  }, [movies]);
+
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
       <div className="absolute top-0 left-0 h-[100vh] w-screen -z-50">
