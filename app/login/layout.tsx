@@ -1,12 +1,12 @@
-import "./globals.css";
+import "./../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Home - Netfilx",
-  description: "Netflix user home page",
+  title: "login - Netfilx",
+  description: "login into netflix account",
   icons: "./favicon.ico",
 };
 

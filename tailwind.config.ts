@@ -14,6 +14,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide'),
+  require('tailwind-scrollbar')({nocompatible: true}),
+  require('tailwindcss-textshadow')
+
+  ],
 }
 export default config

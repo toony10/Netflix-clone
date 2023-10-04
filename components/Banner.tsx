@@ -15,7 +15,6 @@ function Banner({ movies }: Props) {
       setDisplayMovie(movies[Math.floor(Math.random() * movies.length)]);
     }
   }, [movies]);
-  console.log("current movie", displayMovie);
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
       <div className="absolute top-0 left-0 h-[100vh] w-screen -z-50">
@@ -35,7 +34,7 @@ function Banner({ movies }: Props) {
             displayMovie?.name ||
             displayMovie?.original_name}
         </h1>
-        <p className="max-w-xs text-xl text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl text-slate-200 font-light tracking-wider left-5">
+        <p className="max-w-xs text-xl text-shadow-lg md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl text-slate-200 font-light tracking-wider left-5">
           {displayMovie?.overview}
         </p>
       </div>
