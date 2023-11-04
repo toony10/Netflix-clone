@@ -29,6 +29,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "encoding": "^0.1.13",
     "tailwind-scrollbar": "^3.0.5",
     "tailwindcss-textshadow": "^2.1.3"
   }
