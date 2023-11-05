@@ -9,15 +9,15 @@ interface Inputs {
   password: string;
 }
 
-const [Login, setLogin] = useState(false);
-const { signIn, signUp } = useAuth();
-const {
-  register,
-  handleSubmit,
-  watch,
-  formState: { errors },
-} = useForm<Inputs>();
-function login() {
+function Login() {
+  const [Login, setLogin] = useState(false);
+  const { signIn, signUp } = useAuth();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async ({ email, password }) => {
     if (Login) {
       await signIn(email, password);
@@ -105,4 +105,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
